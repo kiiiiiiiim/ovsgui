@@ -1,0 +1,12 @@
+{% extends 'ovs_client/base.html' %}
+{% block content %}
+    <div>
+        <h1>OVSDB list_dbs</h1>
+    </div>
+    <table border=2>
+    {% for db in list_dbs %}
+    	<tr><td>
+    	<a href="http://127.0.0.1:8000/{{ovs_address}}/{{db}}/">{{ db }}</a>
+    	</td></tr>
+    {% endfor %}
+{% endblock content %}

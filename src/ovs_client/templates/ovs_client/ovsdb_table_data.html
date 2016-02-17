@@ -1,0 +1,22 @@
+{% extends 'ovs_client/base.html' %}
+{% block content %}
+	<div>
+        <h1>Table name: {{table_name}}</h1>
+    </div>
+    <table border=5 >
+    	<tr>
+    		{% for column in key_values %}
+    		<td nowrap style="padding:2">{{ column }}</td>
+    		{% endfor %}
+    	</tr>
+    	{% for data in datas %}
+    	<tr>
+    		{% for value in data %}
+    		<td nowrap style="padding:2">
+    			{{ value }}
+    		</td>
+    		{% endfor %}
+    	</tr>
+    	{% endfor %}
+    </table>
+{% endblock content %}
