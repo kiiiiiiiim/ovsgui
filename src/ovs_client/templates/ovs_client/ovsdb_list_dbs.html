@@ -6,7 +6,7 @@
     <table border=2>
     {% for db in list_dbs %}
     	<tr><td>
-    	<a href="http://127.0.0.1:8000/{{ovs_address}}/{{db}}/">{{ db }}</a>
+    	<a href="http://127.0.0.1:8000/{{ovs_address}}/tables/{{db}}/">{{ db }}</a>
     	</td></tr>
     {% endfor %}
 {% endblock content %}
